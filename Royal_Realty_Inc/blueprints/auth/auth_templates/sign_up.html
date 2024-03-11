@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% block content %}
+
+<head>
+    <style>
+    .body {
+        max-height: 1080px;
+            height: 1080px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1900px;
+            /* margin-bottom: 10%; */
+            background-color: black;
+    }
+        .beeeckground {
+            background-image: url("/static/images/Lamborghini-Huracan-Liberty-Walk-2.jpg");
+            background-size: 32.8%;
+            max-height: 1080px;
+            height: 1080px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1900px;
+            /* margin-bottom: 10%; */
+            background-color: black;
+        }
+
+        .left-section {
+            background-color: black;
+            width: 32.8%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 200px;
+        }
+
+        .registration-form {
+            background-color: #1a1a1a;
+            /* padding: 30px; */
+            border-radius: 10px;
+            box-shadow: 0 0 10px gold;
+            width: 100%;
+            max-width: 400px;
+            padding: 12px;
+            color: white;
+            text-shadow: 0px 0px 2px black, 0px 0px 4px gold;
+        }
+
+        .registration-form input {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid gold;
+            border-radius: 5px;
+            background-color: black;
+            color: gold;
+        }
+
+        .registration-form .registration-btn {
+            color: gold;
+            background-color: black;
+            border: 1px solid gold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .registration-form .registration-btn:hover {
+            color: black;
+            background-color: gold;
+        }
+
+        .err-msg {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .registration-h3 {
+            font-size: 1.75rem;
+            margin-top: 0;
+            margin-bottom: .5rem;
+            color: black;
+            text-shadow: 0 0 10px gold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="beeeckground">
+        <div class="left-section">
+            <div class="registration-form">
+                <form action="" method="POST">
+                    {{ form.hidden_tag() }}
+                    <h3 class="registration-h3">Register</h3>
+                    <div class="gg">
+                        {{ form.first_name.label }}
+                        {{ form.first_name(class='form-control mt-2', placeholder='Angelina') }}
+                        {% for error in form.first_name.errors %}
+                        <span class="err-msg">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="gg">
+                        {{ form.last_name.label }}
+                        {{ form.last_name(class='form-control mt-2', placeholder='Jolie') }}
+                        {% for error in form.last_name.errors %}
+                        <span class="err-msg">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="gg">
+                        {{ form.username.label }}
+                        {{ form.username(class='form-control mt-2', placeholder='TombRaider') }}
+                        {% for error in form.username.errors %}
+                        <span class="err-msg">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="gg">
+                        {{ form.email.label }}
+                        {{ form.email(class='form-control mt-2', placeholder='AngelinaJolie@hollywood.com') }}
+                        {% for error in form.email.errors %}
+                        <span class="err-msg">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="gg">
+                        {{ form.password.label }}
+                        {{ form.password(class='form-control mt-2', placeholder='********') }}
+                        {% for error in form.password.errors %}
+                        <span class="err-msg">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="gg">
+                        {{ form.confirm_password.label }}
+                        {{ form.confirm_password(class='form-control mt-2', placeholder='********') }}
+                        {% for error in form.confirm_password.errors %}
+                        <span class="err-msg">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="sign">
+                        <div class="thebutton">
+                            {{ form.submit(class='registration-btn') }}
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock content %}

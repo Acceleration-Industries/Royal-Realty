@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exotic Builds Automotive</title>
+    <style>
+        .bord {
+            background-image: url('/static/images/Tuning_Hub.jpg');
+            background-size: cover;
+            border-radius: 20px;
+            border: 2px solid gold; 
+            display: flex;
+            justify-content: center;
+            padding: 20px; 
+        }
+
+        .form {
+            border-radius: 20px;
+            border-style: ridge;
+            border-color: gold;
+        }
+
+        .bitty {
+            display: flex;
+            justify-content: center;
+        }
+
+        .naudidi {
+            background-color: black;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            width: 300px;
+            height: 430px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 4px;
+            margin-top: 13px;
+        }
+
+        .naudid {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4px;
+            border-radius: 10px;
+            border: 2px solid gold;
+        }
+
+        .btn {
+            background-color: gold;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: darkgoldenrod;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid gold;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .err-msg {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bord">
+        <form action="" method='POST' class="row g-3 form">
+            {{ form.hidden_tag() }}
+            <div class="naudidi">
+                <div class="col-12">
+                    <div class="naudid">
+                        {{ form.name.label }}
+                        {{ form.name(class='form-control mt-2', placeholder='AMS Performance Twin Turbo Kit') }}
+                        {% for error in form.name.errors %}
+                        <span class="err-msg">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="naudid">
+                        {{ form.image.label }}
+                        {{ form.image(class='form-control mt-2', placeholder='Img url **Optional') }}
+                        {% for error in form.image.errors %}
+                        <span class="err-msg">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="naudid">
+                        {{ form.description.label }}
+                        {{ form.description(class='form-control mt-2', placeholder='Description **Optional') }}
+                        {% for error in form.description.errors %}
+                        <span class="err-msg">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="naudid">
+                        {{ form.price.label }}
+                        {{ form.price(class='form-control mt-2') }}
+                        {% for error in form.price.errors %}
+                        <span class="err-msg">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="naudid">
+                        {{ form.quantity.label }}
+                        {{ form.quantity(class='form-control mt-2') }}
+                        {% for error in form.quantity.errors %}
+                        <span class="err-msg">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="naudid">
+                        <div class="bitty">
+                            {{ form.submit(class='btn btn-primary') }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

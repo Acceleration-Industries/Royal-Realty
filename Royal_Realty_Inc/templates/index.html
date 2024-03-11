@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listing</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: black;
+            color: white;
+        }
+        .header-bar {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        .search-area {
+            background: #f8f9fa;
+            padding: 20px 0;
+        }
+        .property-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .property-info {
+            padding: 20px;
+            background: black;
+            color: white;
+        }
+        .sidebar {
+            background: black;
+            padding: 20px;
+            color: white;
+        }
+        .schedule-tour {
+            background: black;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+        .footer {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header-bar">
+    </div>
+    <div class="search-area">
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <form action="/search" method="post">
+                <input type="text" name="city" placeholder="City" required>
+                <input type="text" name="state" placeholder="State" required>
+                <input type="text" name="zip_code" placeholder="Zip Code" required>
+                <input type="text" name="property_type" placeholder="Property Type">
+                <input type="number" name="min_price" placeholder="Min Price">
+                <input type="number" name="max_price" placeholder="Max Price">
+                <button type="submit">Search</button>
+            </form>
+            <div class="col-lg-8">
+                <img src="../static/photos/awesome_house.png" class="property-image" alt="Property Image">
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="schedule-tour">
+                        <h5>Schedule tour</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="property-info">
+        </div>
+    </div>
+    <footer class="footer">
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

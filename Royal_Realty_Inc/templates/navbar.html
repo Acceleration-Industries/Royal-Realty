@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link href="../static/css/main.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/da-mad-rave" rel="stylesheet">
+    <style>
+        /* Reset styles for navbar */
+        .navbar {
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
+            background-color: #000000;
+        }
+
+        .navbar-toggler {
+            padding: 0.25rem 0.75rem;
+            font-size: 1.25rem;
+            line-height: 1;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-list' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M3 11.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1H3.5a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1H3.5a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1H3.5a.5.5 0 0 1-.5-.5z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 1.5em 1.5em;
+        }
+
+        .collapse {
+            display: none;
+        }
+
+        .navbar-nav {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 50px;
+            margin-left: 70px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-nav .nav-link {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            color: black !important;
+            text-shadow: 0 0 1px black, 0 0 2px gold, 0 0 3px gold, 0 0 4px gold,
+            0 0 5px gold, 0 0 6px gold, 0 0 7px gold;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            font-size: 19px;
+            display: flex;
+            flex-direction: row;
+            text-align: unset;
+        }
+
+        .navbar-nav .nav-link:hover {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            color: white !important;
+            text-shadow: 0 0 1px black, 0 0 2px gold, 0 0 3px gold, 0 0 4px gold,
+            0 0 5px gold, 0 0 6px gold, 0 0 7px gold;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            font-size: 19px;
+            display: flex;
+            flex-direction: row;
+            text-align: unset;
+        }
+
+        .navbar-nav .nav-item:last-child {
+            margin-right: 0;
+        }
+
+        .navbar .navbar-brand {
+            color: #1a1a1a;
+            font-size: 28px;
+            text-shadow: 0 0 1px black, 0 0 6px gold, 0 0 8px gold, 0 0 10px gold,
+            0 0 12px gold, 0 0 17px gold, 0 0 20px gold;
+            -webkit-text-stroke-width: 1.5px;
+            -webkit-text-stroke-color: black;
+            margin-left: 40px;
+        }
+
+        .navbar .navbar-brand:hover {
+            color: white;
+        }
+
+        body {
+            font-family: 'Da Mad Rave', sans-serif;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            font-family: 'Da Mad Rave', sans-serif;
+        }
+        .nav-link-hover {
+            color: white;
+        }
+        .page-wrap {
+            width: 100%;
+            background-size: cover;
+            background-color: black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+        .d-inline-block {
+            display: flex;
+            flex-direction: row;
+            align-items: row;
+        }
+    </style>
+    <title>Exotic Builds Automotive</title>
+</head>
+
+<body>
+    <div class="page-wrap">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="/">Exotic Builds Automotive</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item">
+                        <!-- <a class="nav-link" href="#">My Garage</a> -->
+                    </li>
+                    {% endif %}
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Log Out</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signin">  </a>
+                        <!-- Sign In -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signup">Register</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Property Details</title>
+</head>
+<body>
+    <h1>Property Photos</h1>
+    {% for photo in photos %}
+    <div>
+        <img src="{{ photo.href }}" alt="Property photo">
+    </div>
+    {% endfor %}
+</body>
+</html>

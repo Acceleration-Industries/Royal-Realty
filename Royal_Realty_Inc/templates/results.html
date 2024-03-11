@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <style>
+        .body {
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Property Listings</h1>
+    {% for listing in listings %}
+    <div>
+        <h2>{{ listing.description.name }}</h2>
+        <p>Price: ${{ listing.list_price }}</p>
+        <p>Type: {{ listing.type }}</p>
+        <p><a href="{{ listing.href }}">View Details</a></p>
+    </div>
+    {% endfor %}
+</body>
+</html>

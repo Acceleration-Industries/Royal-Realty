@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<head>
+    <style>
+        body {
+            background-color: black;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .mt-5 {
+            margin-top: 5px;
+        }
+
+        .p-5 {
+            padding: 5px;
+        }
+
+        .shadow {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .rounded {
+            border-radius: 10px;
+        }
+
+        .border {
+            border: 1px solid #000000;
+        }
+
+        .border-primarydark {
+            border-color: #000000;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .col {
+            flex: 1;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            color: gold;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #000000;
+            border: 1px solid gold;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            box-shadow: 0 0 10px gold;
+            text-shadow: black 0 0 7px;
+            -webkit-text-stroke-color: #000000 10px;
+        }
+
+        .btn:hover {
+            color: black;
+            background-color: gold;
+            border-color: black;
+            border-radius: 6px;
+            text-shadow: #000000 0 0 7px;
+        }
+
+        .err-msg {
+            color: red;
+        }
+
+        .gol {
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: .5rem;
+            color: black;
+            -webkit-text-stroke-color: gold 3px;
+            -webkit-text-stroke-width: 2px;
+            text-shadow: 1px 1px 10px gold, 1px 1px 10px white !important;
+        }
+
+        .porsche {
+            background-image: url("/static/images/porsche.jpg");
+            background-size: 50%; /* Cover the left 40% of the page */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Set the height to full viewport height */
+        }
+
+        .placeholder {
+            color: #000000;
+            text-shadow: gold;
+        }
+        .acc_access_login {
+background-color: #000000;
+border-radius: 10px;
+border-color: gold;
+border-width: 11px;
+        }
+        .acc_access_login {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<div class="porsche">
+    <form action="" class="acc_access_login" method="POST">
+        
+        {{ form.hidden_tag() }}
+        <div class="gol col-12 mb-3">Account Access Login</div>
+        <div class="col-12">
+            {{ form.email.label }}
+            {{ form.email(class='form-control mt-2', placeholder='AngelinaJolie@Hollywood.com') }}
+            {% for error in form.email.errors %}
+            <span class="err-msg"> {{ error }}</span>
+            {% endfor %}
+        </div>
+        <div class="col-6">
+            {{ form.password.label }}
+            {{ form.password(class='form-control mt-2', placeholder='password') }}
+            {% for error in form.password.errors %}
+            <span class="err-msg"> {{ error }}</span>
+            {% endfor %}
+        </div>
+        <div class="col-12">
+            {{ form.submit(class='btn btn-primary mt-3') }}
+        </div>
+    </form>
+</div>
+{% endblock content %}

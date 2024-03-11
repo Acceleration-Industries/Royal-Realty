@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="../static/main.css">
+    <title>Exotic Builds Automotive</title>
+    <link rel="icon" type="image/x-icon" href="../static/images/lambo1.png">
+    <link href="https://fonts.cdnfonts.com/css/da-mad-rave" rel="stylesheet">
+    <style>
+        /* Stylesheet content here */
+    </style>
+</head>
+<body>
+    <div class="pwrapps">
+        {% extends 'base.html' %}
+        {% block content %}
+        <div class="header-bar">
+        </div>
+        <div class="search-area">
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <form action="/search" method="post">
+                    <input type="text" name="city" placeholder="City" required>
+                    <input type="text" name="state" placeholder="State" required>
+                    <input type="text" name="zip_code" placeholder="Zip Code" required>
+                    <input type="text" name="property_type" placeholder="Property Type">
+                    <input type="number" name="min_price" placeholder="Min Price">
+                    <input type="number" name="max_price" placeholder="Max Price">
+                    <button type="submit">Search</button>
+                </form>
+                <div class="col-md-4 mb-4">
+                    <img src="../static/photos/awesome_house.png" class="property-image" alt="Property Image">
+                    <div class="sidebar">
+                        <div class="schedule-tour">
+                            <h5>Schedule tour</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="property-info">
+            </div>
+        </div>
+        <footer class="footer">
+        </footer>
+        {% endblock %}
+    </div>
+</body>
+</html>

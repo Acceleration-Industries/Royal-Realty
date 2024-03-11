@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXOTIC BUILDS AUTOMOTIVE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.cdnfonts.com/css/monster-racing" rel="stylesheet">
+    <link href="../../../static/css/manufacturer.css" rel="stylesheet">
+    <script src="../../../static/js/main.js"></script>
+    <style>
+@media (min-width: 1920px) {
+    body {
+        background-image: url('../photos/high-end-garage.jpg'); /* High-definition, thematic background */
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .container {
+        max-width: 1600px; /* Optimal for 1920x1080 resolution */
+        margin: 20px auto;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center-align the manufacturer cards */
+    }
+
+    .col-md-4 {
+        margin-bottom: 2rem; /* Spacing between rows */
+    }
+
+    .card {
+        transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    }
+
+    .card:hover {
+        transform: translateY(-10px); /* Slight lift effect on hover */
+        box-shadow: 0 20px 30px rgba(0,0,0,0.2); /* Shadow effect for depth */
+    }
+
+    .card-img-top {
+        max-width: 100%; /* Ensure image fills the card width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .image-container {
+        position: relative;
+    }
+
+    .label {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 20px; /* Enhanced readability */
+        font-weight: bold;
+    }
+
+    .card-body {
+        background-color: rgba(0,0,0,0.8);
+        color: #fff;
+        padding: 20px;
+    }
+
+    .card-title {
+        color: #FFD700; /* Gold color for price to stand out */
+        margin-bottom: 0.5rem;
+    }
+}
+.aston_logo {
+    max-width: 600px; /* Or the width of your logo image */
+    height: auto; /* Adjust based on the aspect ratio of your logo image */
+    margin: 0 auto; /* This centers the div containing the logo */
+    background-image: url('../../../static/photos/aston_long_logo.png');
+    background-size: contain; /* Ensures the logo fits within the div without being cropped */
+    background-repeat: no-repeat; /* Prevents the logo from repeating */
+    background-position: center; /* Centers the logo within the div */
+    display: block; /* Ensures the div is treated as a block-level element */
+    height: 150px; /* Adjust this value based on your logo's size */
+}
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="app-bar">
+            <button class="menu-button" id="menuButton">
+                <img src="../../../static/photos/menu_icon.png" alt="Menu" class="icon">
+            </button>
+            <div class="title-container">
+                <span class="title-text">EXOTIC BUILDS AUTOMOTIVE</span>
+                <img src="../../../static/photos/EXOTIC_BUILDS_LOGO.png" alt="Exotic Builds Logo" class="logo">
+            </div>
+            <button class="sign-in-button" id="signInButton">Sign In</button>
+        </nav>
+        <div class="drawer" id="drawer">
+            </button>
+                <span class="material-icons"></span>
+            </button>
+            <ul class="drawer-list">
+                <li class="drawer-item">
+                    <img src="../../../static/photos/home_icon.png" alt="Home Icon" class="drawer-icon">
+                    <span class="drawer-text">HOME</span>
+                </li>
+                <li class="drawer-item">
+                    <img src="../../../static/photos/shop_exotics_icon3.png" alt="Shop Exotics Icon" class="drawer-icon">
+                    <span class="drawer-text">SHOP EXOTICS</span>
+                </li>
+                <li class="drawer-item">
+                    <img src="../../../static/photos/turbo_icon.png" alt="Shop Parts Icon" class="drawer-icon">
+                    <span class="drawer-text">SHOP PARTS</span>
+                </li>
+                <li class="drawer-item">
+                    <img src="../../../static/photos/cart_icon.png" alt="Cart Icon" class="drawer-icon">
+                    <span class="drawer-text">CART</span>
+                </li>
+            </ul>            
+        </div>
+    </div>
+</div>
+
+<div class="aston_logo"></div> <!-- This div will display the Aston Martin logo -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mb-4"> 
+            <div class="card custom-card">
+                <div class="image-container">
+                    <img src="../../../static/photos/aston_dbs_superleggera.png" class="card-img-top"
+                        alt="Aston Martin DBS Superleggera">
+                    <div class="label">Aston Martin DBS Superleggera</div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Price: $220,000</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card custom-card">
+                <div class="image-container">
+                    <img src="../../../static/photos/aston_db11.png" class="card-img-top"
+                        alt="Aston Martin DB11">
+                    <div class="label">Aston Martin DB11</div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Price: $215,000</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card custom-card">
+                <div class="image-container">
+                    <img src="../../../static/photos/aston_vantage_gt.png" class="card-img-top"
+                        alt="Aston Martin Vantage GT">
+                    <div class="label">Aston Martin Vantage GT</div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Price: $200,000</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
